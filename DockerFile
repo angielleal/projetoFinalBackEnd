@@ -1,0 +1,14 @@
+# Use uma imagem base do OpenJDK
+FROM openjdk:17-jdk-slim
+
+# Adiciona um volume apontando para /tmp
+VOLUME /tmp
+
+# Define o argumento JAR_FILE com o nome do JAR gerado pelo Maven
+ARG JAR_FILE=target/projetoFinalBackEnd-0.0.1-SNAPSHOT.jar
+
+# Copia o JAR para o container Docker
+COPY ${JAR_FILE} app.jar
+
+# Define o comando padrão para executar o JAR
+ENTRYPOINT ["java","-jar","/app.jar"]
