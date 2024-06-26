@@ -19,4 +19,23 @@ public class PrescricaoController {
     }
 
     @PostMapping
-    public Prescricao create(@RequestBody Prescricao pres
+    public Prescricao create(@RequestBody Prescricao prescricao) {
+        return service.save(prescricao);
+    }
+
+    @GetMapping("/{id}")
+    public Prescricao getById(@PathVariable Long id) {
+        return service.findById(id);
+    }
+
+    @PutMapping("/{id}")
+    public Prescricao update(@PathVariable Long id, @RequestBody Prescricao prescricao) {
+        prescricao.setId(id);
+        return service.save(prescricao);  // O método save é usado tanto para criar quanto para atualizar
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        service.deleteById(id);
+    }
+}

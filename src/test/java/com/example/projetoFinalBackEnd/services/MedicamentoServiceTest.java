@@ -2,6 +2,7 @@ package com.example.projetoFinalBackEnd.services;
 
 import com.example.projetoFinalBackEnd.models.Medicamento;
 import com.example.projetoFinalBackEnd.repositories.MedicamentoRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -20,7 +21,8 @@ class MedicamentoServiceTest {
     @Mock
     private MedicamentoRepository medicamentoRepository;
 
-    public MedicamentoServiceTest() {
+    @BeforeEach
+    public void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 
