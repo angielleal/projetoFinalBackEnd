@@ -1,5 +1,6 @@
 package com.example.projetoFinalBackEnd.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,9 +14,11 @@ public class Prescricao {
     private Long id;
 
     @ManyToOne
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Paciente paciente;
 
     @ManyToOne
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Medicamento medicamento;
 
     private String dosagem;

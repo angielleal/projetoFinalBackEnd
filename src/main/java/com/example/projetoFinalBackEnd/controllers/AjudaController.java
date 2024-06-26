@@ -14,9 +14,9 @@ public class AjudaController {
     @GetMapping
     public Map<String, Object> getAjuda() {
         Map<String, Object> ajuda = new HashMap<>();
-        ajuda.put("estudantes", new String[]{"fulano", "beltrano"});
-        ajuda.put("projeto", "nome do projeto");
-        ajuda.put("tema", "tema do projeto");
+        ajuda.put("estudantes", new String[]{"Angiel Leal", "Mateus Zanin Fernandes"});
+        ajuda.put("projeto", "Projeto de Saúde e Bem-estar");
+        ajuda.put("tema", "Gerenciar medicamentos e prescrições médicas.");
         return ajuda;
     }
 }
