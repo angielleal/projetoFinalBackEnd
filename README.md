@@ -61,6 +61,8 @@ Passos
 docker-compose up
 A aplicação estará disponível em http://localhost:8080.
 
+- Link DockerHub https://hub.docker.com/r/mateuszanin/my-image
+
 - Endpoints da API
 
 *Medicamentos
